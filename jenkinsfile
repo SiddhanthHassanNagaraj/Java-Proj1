@@ -1,8 +1,5 @@
 pipeline {
     agent { label 'MAS' }
-    triggers {
-        pollSCM 'H/3 * * * *'
-    }
     stages {
         stage ("SCM Chkout-1"){
             steps {
@@ -11,7 +8,8 @@ pipeline {
         }
         stage ("Java execute") {
             steps {
-                sh label: '', script: '''javac *.java java Simple'''
+                sh 'javac *.java'
+                sh 'java Simple'
             }
         }
     }
