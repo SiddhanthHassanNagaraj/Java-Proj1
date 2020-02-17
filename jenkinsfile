@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'G2' }
+    agent { label 'MAS' }
     triggers {
         pollSCM 'H/3 * * * *'
     }
