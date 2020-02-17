@@ -9,7 +9,7 @@ pipeline {
                 git 'https://github.com/Vishwanathms/Java-Proj1'
             }
         }
-        stage ("compile java") {
+        stage ("Java execute") {
             steps {
                 sh "javac *.java"
                 sh "java Simple"
