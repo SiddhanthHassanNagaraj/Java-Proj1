@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage ("SCM Chkout-1"){
             steps {
-                git 'https://github.com/Vishwanathms/Java-Proj1'
+                git 'https://github.com/SiddhanthHassanNagaraj/Java-Proj1'
             }
         }
         stage ("Java execute") {
