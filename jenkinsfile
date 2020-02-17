@@ -6,12 +6,12 @@ pipeline {
     stages {
         stage ("SCM Chkout-1"){
             steps {
-                git branch: 'B1', url: 'https://github.com/Vishwanathms/Java-Proj1'
+                git 'https://github.com/Vishwanathms/Java-Proj1'
             }
         }
         stage ("compile java") {
             steps {
-                sh "javac Samplecode.java"
+                sh "javac *.java"
                 sh "java Simple"
             }
         }
